@@ -15,7 +15,6 @@ function assertThatCommandIsValid(command) {
 }
 
 class CreateUser {
-
   /**
    * @param {UserRepository} repository
    */
