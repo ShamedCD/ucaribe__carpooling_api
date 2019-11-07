@@ -3,4 +3,4 @@ module.exports = class AuthItemChild {
         this.parent = data.parent;
         this.child = data.child;
     }
-}
+};

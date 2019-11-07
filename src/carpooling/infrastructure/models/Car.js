@@ -1,44 +1,41 @@
 const { EntitySchema } = require('typeorm');
 
 const { basePath } = global;
-const { AuthItem: Model } = require(`${basePath}/src/domain/models`);
+const { Car: Model } = require(`${basePath}/src/domain/models`);
 
 module.exports = new EntitySchema({
-    name: 'authItem',
-    tableName: 'auth_item',
+    name: 'car',
+    tableName: 'car',
     target: Model,
     columns: {
-        name: {
-            type: String,
-            nullable: false,
-            primary: true,
-        },
-        type: {
+        id: {
             type: Number,
             nullable: false,
+            primary: true,
+            generated: "increment",
         },
-        description: {
+        model: {
             type: String,
             nullable: true,
         },
-        ruleName: {
+        color: {
             type: String,
             nullable: true,
-            name: 'rule_name',
         },
-        data: {
+        plateNumber: {
             type: String,
             nullable: true,
+            name: 'plate_number',
+        },
+        createdBy: {
+            type: String,
+            nullable: false,
+            name: 'created_by',
         },
         createdAt: {
             type: String,
             nullable: false,
             name: 'created_at',
         },
-        updatedAt: {
-            type: String,
-            nullable: false,
-            name: 'updated_at',
-        },
-    },
+    }
 });

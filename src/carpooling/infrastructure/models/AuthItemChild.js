@@ -4,7 +4,7 @@ const { basePath } = global;
 const { AuthItemChild: Model } = require(`${basePath}/src/domain/models`);
 
 module.exports = new EntitySchema({
-    name: 'AuthItemChild',
+    name: 'authItemChild',
     tableName: 'auth_item_child',
     target: Model,
     columns: {

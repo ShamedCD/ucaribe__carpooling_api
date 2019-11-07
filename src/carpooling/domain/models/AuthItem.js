@@ -8,4 +8,4 @@ module.exports = class AuthItem {
         this.createdAt = data.createdAt;
         this.updatedAt = data.updatedAt;
     }
-}
+};
